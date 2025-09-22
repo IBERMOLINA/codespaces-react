@@ -382,6 +382,46 @@ class DaKrakenApp {
     }, 1000);
   }
 
+  // Build Session Info Modal
+  showBuildSession() {
+    const modal = DK.$('#build-modal');
+    const themeEl = DK.$('#current-theme');
+    const buildDateEl = DK.$('#build-date');
+    
+    if (modal) {
+      modal.style.display = 'flex';
+      
+      // Update current theme info
+      if (themeEl) {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'auto';
+        themeEl.textContent = currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1);
+      }
+      
+      // Update build date
+      if (buildDateEl) {
+        const today = new Date();
+        buildDateEl.textContent = today.toISOString().split('T')[0];
+      }
+      
+      // Focus management for accessibility
+      const closeBtn = modal.querySelector('.modal-close');
+      if (closeBtn) {
+        closeBtn.focus();
+      }
+      
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  hideBuildSession() {
+    const modal = DK.$('#build-modal');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  }
+
   // Public API methods
   getCurrentSection() {
     return this.currentSection;

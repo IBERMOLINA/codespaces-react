@@ -105,6 +105,10 @@
                             <div class="stat-value">100%</div>
                             <div class="stat-label">Local</div>
                         </div>
+                        <div class="stat-card build-info-card" onclick="showBuildSession()">
+                            <div class="stat-value">ℹ️</div>
+                            <div class="stat-label">Build Info</div>
+                        </div>
                     </div>
                 </section>
 
@@ -187,6 +191,48 @@
                     </div>
                 </section>
             </main>
+        </div>
+    </div>
+
+    <!-- Build Session Info Modal -->
+    <div id="build-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🐙 Build Session Info</h3>
+                <button class="modal-close" onclick="hideBuildSession()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="build-stats">
+                    <div class="build-stat">
+                        <span class="stat-label">Version:</span>
+                        <span class="stat-value">v1.0.0</span>
+                    </div>
+                    <div class="build-stat">
+                        <span class="stat-label">Build Date:</span>
+                        <span class="stat-value" id="build-date">2025-09-22</span>
+                    </div>
+                    <div class="build-stat">
+                        <span class="stat-label">Optimization:</span>
+                        <span class="stat-value">78% size reduction</span>
+                    </div>
+                    <div class="build-stat">
+                        <span class="stat-label">Features:</span>
+                        <span class="stat-value">PWA + Offline</span>
+                    </div>
+                    <div class="build-stat">
+                        <span class="stat-label">Dependencies:</span>
+                        <span class="stat-value">Zero (Vanilla JS)</span>
+                    </div>
+                    <div class="build-stat">
+                        <span class="stat-label">Theme:</span>
+                        <span class="stat-value" id="current-theme">Auto</span>
+                    </div>
+                </div>
+                <div class="build-actions">
+                    <button class="btn btn-primary" onclick="openBuildInstructions()">📖 View Deployment Guide</button>
+                    <button class="btn btn-secondary" onclick="runBuildVerification()">🔍 Verify Build</button>
+                </div>
+            </div>
         </div>
     </div>
 
