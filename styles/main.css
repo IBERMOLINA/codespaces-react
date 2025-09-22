@@ -57,23 +57,26 @@
   --radius-2xl: 1rem;
 }
 
-/* Dark Theme */
+/* Dark Theme - High Contrast */
 [data-theme="dark"] {
-  --color-bg-primary: #0f172a;
-  --color-bg-secondary: #1e293b;
-  --color-bg-tertiary: #334155;
-  --color-surface: #1e293b;
-  --color-surface-elevated: #334155;
-  
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  
-  --color-border: #334155;
-  --color-border-hover: #475569;
-}
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0a0a0a;
+  --color-bg-tertiary: #1a1a1a;
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #1a1a1a;
 
-/* Reset and Base Styles */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-text-muted: #b0b0b0;
+
+  --color-border: #333333;
+  --color-border-hover: #555555;
+
+  /* High contrast button colors */
+  --color-primary: #00ffff;
+  --color-primary-dark: #00cccc;
+  --color-error: #ff4444;
+}/* Reset and Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;
 }
