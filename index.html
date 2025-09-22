@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Da-Kraken - Local App</title>
     <meta name="description" content="A modern local application with engaging user experience">
-    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- PWA and Performance -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2d3748">
+    <meta name="theme-color" content="#4338ca">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Da-Kraken">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="scripts/utils.js" as="script">
+    <link rel="preload" href="scripts/app.js" as="script">
+    
+    <link rel="stylesheet" href="styles/main.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
